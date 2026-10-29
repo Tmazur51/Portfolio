@@ -1,4 +1,52 @@
-body { font-family: Arial, sans-serif; max-width: 800px; margin: 0 auto; padding: 20px; line-height: 1.6; }
-header { text-align: center; margin-bottom: 40px; }
-.project { border: 1px solid #ddd; border-radius: 8px; padding: 16px; margin-bottom: 24px; }
-.project img { max-width: 100%; border-radius: 4px; }
+body {
+  font-family: Arial, sans-serif;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+  line-height: 1.6;
+  background: #e8f0eb;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.feature {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.feature figure {
+  margin: 0;
+  flex: 1;
+}
+
+.feature img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feature figcaption {
+  margin-top: 10px;
+  padding-left: 10px;
+  font-size: 0.95rem;
+}
+
+.feature-text {
+  flex: 1;
+  font-size: 1.2rem;
+  line-height: 2;
+  margin: 0;
+}
+
+/* Stack vertically on phones */
+@media (max-width: 700px) {
+  .feature {
+    flex-direction: column;
+  }
+}
