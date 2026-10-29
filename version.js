@@ -1,6 +1,6 @@
 (function () {
   var el = document.getElementById("site-version");
   if (el) {
-    el.textContent = "V14";
+    el.textContent = "V15";
   }
 })();
