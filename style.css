@@ -94,6 +94,49 @@ h2 {
   margin: 0;
 }
 
+/* Education: photo | text | photo */
+.education-section {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+.edu-photo {
+  margin: 0;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.edu-photo img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.edu-text {
+  flex: 0 0 auto;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.edu-heading {
+  font-size: 1.5rem;
+  margin: 0 0 18px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.edu-school {
+  margin: 0 0 16px;
+  font-size: 1.05rem;
+}
+
+.edu-school:last-child {
+  margin-bottom: 0;
+}
+
 /* Frisbee: two equal photos with centered captions */
 .photo-row {
   display: flex;
@@ -246,6 +289,22 @@ h2 {
   color: #3a4a40;
 }
 
+/* Grid of images with no captions (K-maps, build photos) */
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 0 0 32px;
+}
+
+.photo-grid img {
+  width: 100%;
+  height: auto;
+  border: 1px solid #ccd9d0;
+  border-radius: 8px;
+  display: block;
+}
+
 .tools {
   list-style: none;
   padding: 0;
@@ -312,6 +371,7 @@ h2 {
 @media (max-width: 700px) {
   .intro-section,
   .about-section,
+  .education-section,
   .photo-row,
   .video-row {
     flex-direction: column;
@@ -319,7 +379,8 @@ h2 {
   }
 
   .intro-photo,
-  .about-photo {
+  .about-photo,
+  .edu-photo {
     flex: 0 0 auto;
     width: 100%;
     max-width: 320px;
