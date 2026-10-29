@@ -1,6 +1,11 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 body {
   font-family: Arial, sans-serif;
-  max-width: 1100px;
+  max-width: 1000px;
   margin: 0 auto;
   padding: 20px;
   line-height: 1.6;
@@ -47,45 +52,37 @@ nav a.active {
   margin-bottom: 24px;
 }
 
-.project img {
-  max-width: 100%;
-  border-radius: 4px;
-}
-
-.feature {
+/* Photos side by side */
+.photo-row {
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  gap: 32px;
-  margin-bottom: 40px;
+  flex-direction: row;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 20px;
 }
 
-.feature figure {
+.photo-row figure {
   margin: 0;
   flex: 1;
+  min-width: 0;
+  max-width: 400px;
 }
 
-.feature img {
+.photo-row img {
   width: 100%;
   height: auto;
   display: block;
 }
 
-.feature figcaption {
+.photo-row figcaption {
   margin-top: 10px;
-  padding-left: 10px;
   font-size: 0.95rem;
 }
 
-.feature-text {
-  flex: 1;
-  font-size: 1.2rem;
-  line-height: 2;
-  margin: 0;
-}
-
-@media (max-width: 700px) {
-  .feature {
-    flex-direction: column;
-  }
+/* Description under both photos */
+.team-caption {
+  text-align: center;
+  font-size: 1.1rem;
+  max-width: 824px;
+  margin: 0 auto 40px;
 }
