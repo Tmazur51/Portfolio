@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>2-Bit Multiplier | Thomas Mazur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Thomas Mazur</h1>
+    <p>Electrical Engineering student | University of Pittsburgh</p>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="back-link"><a href="projects.html">← Back to Projects</a></p>
+
+    <article class="project-detail">
+      <h2>2-Bit Multiplier</h2>
+      <p class="project-meta">ECE 201 · Digital Circuits and Systems</p>
+
+      <p>
+        A combinational logic circuit that multiplies two 2-bit binary numbers and displays the 4-bit product on LEDs. Built entirely from discrete logic gates — no adders, no ICs doing the arithmetic for you — so every output bit comes from a Boolean expression I derived and minimized by hand.
+      </p>
+
+      <figure class="project-figure">
+        <img src="mages/multiplier_3x3.jpg" alt="2-bit multiplier circuit displaying 3 times 3 equals 9">
+        <figcaption>The circuit displaying 3 × 3 = 9.</figcaption>
+      </figure>
+
+      <h3>Planning</h3>
+      <p>
+        I started with a truth table covering all sixteen input combinations, then wrote a Karnaugh map for each of the four output bits and reduced each to its minimal sum-of-products expression. Several of those expressions shared common terms, so I combined them rather than implementing each independently, which cut the gate count substantially.
+      </p>
+
+      <div class="photo-grid">
+        <img src="mages/multiplier_kmap1.jpg" alt="Karnaugh map for the multiplier output bits">
+        <img src="mages/multiplier_kmap2.jpg" alt="Karnaugh map for the multiplier output bits">
+      </div>
+
+      <h3>Building</h3>
+      <p>
+        The optimization paid off in parts: the final circuit uses four chips — two AND gates, one XOR, and one NOT — instead of the larger set a naive implementation would have needed. Fewer chips also meant a much cleaner breadboard layout.
+      </p>
+      <p>
+        I built and tested one output branch at a time rather than wiring the whole thing and debugging at the end. Verifying each branch against the truth table before moving to the next kept faults local to whatever I'd just added.
+      </p>
+
+      <div class="photo-grid">
+        <img src="mages/multiplier_build1.jpg" alt="Breadboard build of the 2-bit multiplier">
+        <img src="mages/multiplier_build2.jpg" alt="Breadboard build of the 2-bit multiplier">
+      </div>
+
+      <ul class="tools">
+        <li>Discrete logic</li>
+        <li>Karnaugh maps</li>
+        <li>Boolean minimization</li>
+        <li>breadboarding</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="version" id="site-version"></footer>
+  <script src="version.js"></script>
+</body>
+</html>
