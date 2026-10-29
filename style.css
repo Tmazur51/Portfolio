@@ -12,6 +12,46 @@ header {
   margin-bottom: 40px;
 }
 
+nav {
+  margin-top: 16px;
+}
+
+nav a {
+  display: inline-block;
+  margin: 0 10px;
+  padding: 6px 14px;
+  color: #222;
+  text-decoration: none;
+  border-radius: 6px;
+}
+
+nav a:hover {
+  background: #d3e2d9;
+}
+
+nav a.active {
+  background: #bcd3c5;
+  font-weight: bold;
+}
+
+.intro {
+  font-size: 1.1rem;
+  margin-bottom: 40px;
+}
+
+.project {
+  background: #fff;
+  border: 1px solid #ccd9d0;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 24px;
+}
+
+.project img {
+  max-width: 100%;
+  border-radius: 4px;
+}
+
 .feature {
   display: flex;
   align-items: flex-start;
@@ -44,7 +84,6 @@ header {
   margin: 0;
 }
 
-/* Stack vertically on phones */
 @media (max-width: 700px) {
   .feature {
     flex-direction: column;
