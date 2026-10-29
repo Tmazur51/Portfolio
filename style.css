@@ -39,9 +39,30 @@ nav a.active {
   font-weight: bold;
 }
 
-.intro {
-  font-size: 1.1rem;
+/* Intro photo + text at the top */
+.intro-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
   margin-bottom: 40px;
+}
+
+.intro-photo {
+  margin: 0;
+  flex: 0 0 320px;
+}
+
+.intro-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.intro-text {
+  flex: 1;
+  font-size: 1.1rem;
+  margin: 0;
 }
 
 /* About Me photo + text */
@@ -117,9 +138,15 @@ nav a.active {
 
 /* Stack on phones */
 @media (max-width: 700px) {
+  .intro-section,
   .about-section,
   .photo-row {
     flex-direction: column;
+  }
+
+  .intro-photo {
+    flex: 0 0 auto;
+    max-width: 320px;
   }
 }
 
