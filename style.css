@@ -159,6 +159,35 @@ h2 {
   text-decoration: underline;
 }
 
+/* Clickable project card with thumbnail */
+.project-link {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.project-link:hover {
+  border-color: #9ec0ac;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.project-thumb {
+  flex: 0 0 220px;
+  width: 220px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+}
+
+.project-body {
+  flex: 1;
+  min-width: 0;
+}
+
 /* Project detail page */
 .back-link {
   margin: 0 0 24px;
@@ -184,6 +213,11 @@ h2 {
   margin: 0 0 6px;
   padding-bottom: 0;
   border-bottom: none;
+}
+
+.project-detail h3 {
+  font-size: 1.2rem;
+  margin: 0 0 14px;
 }
 
 .project-meta {
@@ -231,11 +265,6 @@ h2 {
 }
 
 /* Project videos (vertical Shorts) */
-.video-section h3 {
-  font-size: 1.2rem;
-  margin: 0 0 16px;
-}
-
 .video-row {
   position: relative;
   left: 50%;
@@ -301,6 +330,16 @@ h2 {
     flex: 0 0 auto;
     max-width: 280px;
     margin: 0 auto;
+  }
+
+  .project-link {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .project-thumb {
+    flex: 0 0 auto;
+    width: 100%;
   }
 }
 
