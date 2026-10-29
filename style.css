@@ -44,6 +44,34 @@ nav a.active {
   margin-bottom: 40px;
 }
 
+/* About Me photo + text */
+.about-section {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: 40px;
+}
+
+.about-photo {
+  margin: 0;
+  flex: 1;
+  min-width: 0;
+  max-width: 400px;
+}
+
+.about-photo img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.about-text {
+  flex: 1;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
 .project {
   background: #fff;
   border: 1px solid #ccd9d0;
@@ -85,4 +113,21 @@ nav a.active {
   font-size: 1.1rem;
   max-width: 824px;
   margin: 0 auto 40px;
+}
+
+/* Stack on phones */
+@media (max-width: 700px) {
+  .about-section,
+  .photo-row {
+    flex-direction: column;
+  }
+}
+
+/* Version marker */
+.version {
+  text-align: center;
+  color: #8aa394;
+  font-size: 0.8rem;
+  margin-top: 40px;
+  padding-bottom: 20px;
 }
