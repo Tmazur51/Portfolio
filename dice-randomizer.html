@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Two-Dice Electronic Randomizer | Thomas Mazur</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Thomas Mazur</h1>
+    <p>Electrical Engineering student | University of Pittsburgh</p>
+    <nav>
+      <a href="index.html">About Me</a>
+      <a href="projects.html" class="active">Projects</a>
+    </nav>
+  </header>
+
+  <main>
+    <p class="back-link"><a href="projects.html">← Back to Projects</a></p>
+
+    <article class="project-detail">
+      <h2>Two-Dice Electronic Randomizer</h2>
+      <p class="project-meta">ECE 1895 · Junior Design Fundamentals · Fall 2026</p>
+
+      <p>
+        A hardware dice simulator built from a 555 timer and a CD4017 decade counter per die. Each 555 free-runs as an astable oscillator, clocking its counter through six states, and a diode matrix maps those states onto seven LEDs laid out in the standard pip pattern. A single pushbutton gates both counters at their clock-inhibit pins — hold it and both dice roll, release and both freeze. Because the oscillators never stop, the result depends entirely on release timing against an unsynchronized clock.
+      </p>
+
+      <figure class="project-figure">
+        <img src="mages/dice_breadboard.jpg" alt="Breadboard prototype of the two-dice randomizer">
+        <figcaption>
+          Breadboard prototype. I built and verified one die at a time so any new fault traced to the subsystem I'd just added — which is how I caught a defective 555 I was otherwise convinced was a wiring error.
+        </figcaption>
+      </figure>
+
+      <figure class="project-figure">
+        <img src="mages/dice_pcb.jpg" alt="Final two-layer PCB with LEDs arranged in a dice pip pattern">
+        <figcaption>
+          Final two-layer board, laid out in Altium and hand-assembled. The LEDs are placed in the dice pip pattern so the board reads as a die when it lights up.
+        </figcaption>
+      </figure>
+
+      <p>
+        Designed in LTspice, prototyped on breadboard, routed in Altium, and hand-soldered after fabrication.
+      </p>
+
+      <ul class="tools">
+        <li>555 timer</li>
+        <li>CD4017</li>
+        <li>LTspice</li>
+        <li>Altium</li>
+        <li>PCB design</li>
+        <li>hand soldering</li>
+      </ul>
+    </article>
+  </main>
+
+  <footer class="version">V5</footer>
+</body>
+</html>
