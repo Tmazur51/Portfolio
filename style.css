@@ -237,16 +237,21 @@ h2 {
 }
 
 .video-row {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(960px, calc(100vw - 32px));
   display: flex;
-  gap: 20px;
+  gap: 16px;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   margin-bottom: 28px;
 }
 
 .video {
   margin: 0;
-  flex: 0 1 260px;
+  flex: 1 1 0;
+  min-width: 0;
   text-align: center;
 }
 
