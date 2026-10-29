@@ -129,7 +129,7 @@ h2 {
   margin: 0 auto 48px;
 }
 
-/* Projects */
+/* Projects list */
 .project {
   background: #fff;
   border: 1px solid #ccd9d0;
@@ -145,6 +145,89 @@ h2 {
 
 .project p {
   margin: 0;
+}
+
+.read-more {
+  display: inline-block;
+  margin-top: 10px;
+  color: #2f6e4f;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.read-more:hover {
+  text-decoration: underline;
+}
+
+/* Project detail page */
+.back-link {
+  margin: 0 0 24px;
+}
+
+.back-link a {
+  color: #3a4a40;
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+
+.back-link a:hover {
+  text-decoration: underline;
+}
+
+.project-detail {
+  max-width: 760px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+}
+
+.project-detail h2 {
+  margin: 0 0 6px;
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.project-meta {
+  margin: 0 0 28px;
+  color: #3a4a40;
+  font-size: 0.95rem;
+}
+
+.project-detail p {
+  margin: 0 0 28px;
+}
+
+.project-figure {
+  margin: 0 0 32px;
+}
+
+.project-figure img {
+  width: 100%;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-figure figcaption {
+  margin-top: 10px;
+  font-size: 0.95rem;
+  color: #3a4a40;
+}
+
+.tools {
+  list-style: none;
+  padding: 0;
+  margin: 4px 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.tools li {
+  background: #d8e4dc;
+  border: 1px solid #bcd3c5;
+  border-radius: 999px;
+  padding: 5px 14px;
+  font-size: 0.9rem;
+  color: #2f3e35;
 }
 
 /* Stack on phones */
